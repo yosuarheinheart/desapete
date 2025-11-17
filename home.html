@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Pete - Pengalaman AR/VR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Desa Pete</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home">Beranda</a></li>
+                <li class="nav-item"><a href="#fitur">Fitur</a></li>
+                <li class="nav-item"><a href="#arvr">AR/VR</a></li>
+                <li class="nav-item"><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Desa Pete</h1>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="feature-section" id="fitur">
+        <div class="container">
+            <div class="feature-header">
+                <h2>Fitur AR/VR</h2>
+                <p>
+                    Jelajahi Desa Pete dengan teknologi Augmented Reality (AR) dan Virtual Reality (VR) yang inovatif. 
+                    Rasakan pengalaman interaktif 360 derajat yang memungkinkan Anda untuk menjelajahi keindahan desa, 
+                    berinteraksi dengan lingkungan virtual, dan mengenal lebih dekat potensi wisata serta budaya lokal. 
+                    Teknologi AR/VR kami menghadirkan cara baru untuk merasakan pesona Desa Pete dari mana saja, 
+                    memberikan pengalaman imersif yang tak terlupakan bagi pengunjung virtual maupun calon wisatawan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AR/VR Content Section -->
+    <section class="arvr-section" id="arvr">
+        <div class="container">
+            <h2>Pengalaman AR/VR Interaktif</h2>
+            <div class="unity-container">
+                <canvas id="unity-canvas" style="width: 100%; height: 100%;"></canvas>
+                   <script src="Build/Upd17Nov.loader.js"></script>
+                   <script>
+                       createUnityInstance(document.querySelector("#unity-canvas"), {
+                        dataUrl: buildUrl + "/Upd17Nov.data",
+                        frameworkUrl: buildUrl + "/Upd17Nov.framework.js",
+                        codeUrl: buildUrl + "/Upd17Nov.wasm",
+                        streamingAssetsUrl: "StreamingAssets",
+                        companyName: "DefaultCompany",
+                        productName: "VRMAPDESAPETE",
+                        productVersion: "0.1.0",
+                    });
+                   </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Alamat</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Desa Pete No. 123<br>Kecamatan Pete, Kabupaten Indah<br>Provinsi Hijau, Indonesia 12345</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@desapete.id">info@desapete.id</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+62212345678">+62 21 2345 678</a></p>
+                <p><i class="fas fa-fax"></i> +62 21 2345 679</p>
+            </div>
+            <div class="footer-section">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Desa Pete. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
